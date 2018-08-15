@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp (new application(),
+ 
+  );
+  
+}
+
+class _applicationState extends State<application> {
+  @override
+  String bname='';
+  void initState(){
+    bname='click me';
+    super.initState();
+  }
+  void get(){
+    setState(() {
+          bname='thanks for click me babay';
+        });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'sixface',
+      home: Scaffold(
+        body: new Center(
+          child: new RaisedButton(onPressed: (){get();},child: new Text(bname),),
+        ),
+      ),
+
+      
+    );
+  }
+}
